@@ -1,0 +1,305 @@
+<svg width="900" height="500" viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <style>
+    @keyframes scan { 0%{transform:translateY(-500px)} 100%{transform:translateY(500px)} }
+    @keyframes blink { 0%,49%,100%{opacity:1} 50%,99%{opacity:0} }
+    @keyframes pulse { 0%,100%{opacity:.4;r:12} 50%{opacity:1;r:16} }
+    @keyframes pulse2 { 0%,100%{opacity:.4;r:12} 50%{opacity:1;r:16} }
+    @keyframes pulse3 { 0%,100%{opacity:.4;r:12} 50%{opacity:1;r:16} }
+    @keyframes pulse4 { 0%,100%{opacity:.4;r:12} 50%{opacity:1;r:16} }
+    @keyframes pulse5 { 0%,100%{opacity:.4;r:12} 50%{opacity:1;r:16} }
+    @keyframes pipeGlow { 0%,100%{stroke-opacity:.2} 50%{stroke-opacity:.8} }
+    @keyframes p1a { 0%{transform:translateX(0);opacity:0} 5%{opacity:1} 90%{opacity:1} 100%{transform:translateX(125px);opacity:0} }
+    @keyframes p1b { 0%{transform:translateX(0);opacity:0} 5%{opacity:1} 90%{opacity:1} 100%{transform:translateX(125px);opacity:0} }
+    @keyframes p2a { 0%{transform:translateX(0);opacity:0} 5%{opacity:1} 90%{opacity:1} 100%{transform:translateX(128px);opacity:0} }
+    @keyframes p3a { 0%{transform:translateX(0);opacity:0} 5%{opacity:1} 90%{opacity:1} 100%{transform:translateX(126px);opacity:0} }
+    @keyframes p4a { 0%{transform:translateX(0);opacity:0} 5%{opacity:1} 90%{opacity:1} 100%{transform:translateX(124px);opacity:0} }
+    @keyframes fraudUp { 0%{transform:translateY(0);opacity:0} 5%{opacity:1} 90%{opacity:1} 100%{transform:translateY(-72px);opacity:0} }
+    @keyframes alertFlash { 0%,100%{fill:#1A0810;stroke-opacity:.7} 50%{fill:#3A0820;stroke-opacity:1} }
+    @keyframes typewrite { from{opacity:0} to{opacity:1} }
+    @keyframes countUp { 0%{opacity:0} 100%{opacity:1} }
+    @keyframes ruleOn { 0%,79%,100%{fill:#0A0408;stroke-opacity:.3} 80%,95%{fill:#2A0818;stroke-opacity:1} }
+    @keyframes metricBounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-2px)} }
+    @keyframes shimmer { 0%{x:-200} 100%{x:1100} }
+    .scan{animation:scan 6s linear infinite}
+    .blink{animation:blink 1s step-end infinite}
+    .n1{animation:pulse 2s ease-in-out infinite}
+    .n2{animation:pulse2 2s ease-in-out infinite .4s}
+    .n3{animation:pulse3 2s ease-in-out infinite .8s}
+    .n4{animation:pulse4 2s ease-in-out infinite 1.2s}
+    .n5{animation:pulse5 2s ease-in-out infinite 1.6s}
+    .pipe{animation:pipeGlow 2.5s ease-in-out infinite}
+    .pk1a{animation:p1a 2.1s linear infinite}
+    .pk1b{animation:p1a 2.1s linear infinite .7s}
+    .pk1c{animation:p1a 2.1s linear infinite 1.4s}
+    .pk2a{animation:p2a 2.3s linear infinite .3s}
+    .pk2b{animation:p2a 2.3s linear infinite 1.3s}
+    .pk3a{animation:p3a 2.2s linear infinite .6s}
+    .pk3b{animation:p3a 2.2s linear infinite 1.6s}
+    .pk4a{animation:p4a 2.4s linear infinite .9s}
+    .pk4b{animation:p4a 2.4s linear infinite 1.9s}
+    .fu1{animation:fraudUp 3s linear infinite 1.2s}
+    .fu2{animation:fraudUp 3s linear infinite 2.8s}
+    .alert{animation:alertFlash 2s ease-in-out infinite}
+    .rl1{animation:ruleOn 5s ease-in-out infinite}
+    .rl2{animation:ruleOn 5s ease-in-out infinite 1s}
+    .rl3{animation:ruleOn 5s ease-in-out infinite 2s}
+    .rl4{animation:ruleOn 5s ease-in-out infinite 3s}
+    .rl5{animation:ruleOn 5s ease-in-out infinite 4s}
+    .mb{animation:metricBounce 2.5s ease-in-out infinite}
+  </style>
+  <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" style="stop-color:#080208"/>
+    <stop offset="100%" style="stop-color:#0D0510"/>
+  </linearGradient>
+  <linearGradient id="topG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" style="stop-color:#CC0022;stop-opacity:.9"/>
+    <stop offset="40%" style="stop-color:#FF2244;stop-opacity:1"/>
+    <stop offset="100%" style="stop-color:#CC0022;stop-opacity:.9"/>
+  </linearGradient>
+  <linearGradient id="shimG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" style="stop-color:#fff;stop-opacity:0"/>
+    <stop offset="50%" style="stop-color:#fff;stop-opacity:.07"/>
+    <stop offset="100%" style="stop-color:#fff;stop-opacity:0"/>
+  </linearGradient>
+  <filter id="glow1">
+    <feGaussianBlur stdDeviation="3" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="sglow">
+    <feGaussianBlur stdDeviation="6" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <marker id="aR" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+    <path d="M0,0 L6,3 L0,6 Z" fill="#FF2244" opacity=".8"/>
+  </marker>
+  <marker id="aO" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+    <path d="M0,0 L6,3 L0,6 Z" fill="#FF7700" opacity=".8"/>
+  </marker>
+  <marker id="aB" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+    <path d="M0,0 L6,3 L0,6 Z" fill="#00AAFF" opacity=".8"/>
+  </marker>
+  <marker id="aP" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+    <path d="M0,0 L6,3 L0,6 Z" fill="#9944FF" opacity=".8"/>
+  </marker>
+  <marker id="aU" markerWidth="6" markerHeight="6" refX="3" refY="0" orient="auto">
+    <path d="M0,6 L3,0 L6,6 Z" fill="#FF2244" opacity=".8"/>
+  </marker>
+</defs>
+
+<!-- BG -->
+<rect width="900" height="500" fill="url(#bg1)"/>
+
+<!-- Grid -->
+<g stroke="#FF2244" stroke-width=".3" opacity=".05">
+  <line x1="0" y1="40" x2="900" y2="40"/><line x1="0" y1="80" x2="900" y2="80"/>
+  <line x1="0" y1="120" x2="900" y2="120"/><line x1="0" y1="160" x2="900" y2="160"/>
+  <line x1="0" y1="200" x2="900" y2="200"/><line x1="0" y1="240" x2="900" y2="240"/>
+  <line x1="0" y1="280" x2="900" y2="280"/><line x1="0" y1="320" x2="900" y2="320"/>
+  <line x1="0" y1="360" x2="900" y2="360"/><line x1="0" y1="400" x2="900" y2="400"/>
+  <line x1="0" y1="440" x2="900" y2="440"/>
+  <line x1="90" y1="0" x2="90" y2="500"/><line x1="180" y1="0" x2="180" y2="500"/>
+  <line x1="270" y1="0" x2="270" y2="500"/><line x1="360" y1="0" x2="360" y2="500"/>
+  <line x1="450" y1="0" x2="450" y2="500"/><line x1="540" y1="0" x2="540" y2="500"/>
+  <line x1="630" y1="0" x2="630" y2="500"/><line x1="720" y1="0" x2="720" y2="500"/>
+  <line x1="810" y1="0" x2="810" y2="500"/>
+</g>
+
+<!-- Scan -->
+<rect class="scan" width="900" height="40" fill="white" opacity=".012"/>
+
+<!-- Shimmer -->
+<rect width="200" height="36" fill="url(#shimG)" y="0">
+  <animate attributeName="x" from="-200" to="1100" dur="4s" repeatCount="indefinite"/>
+</rect>
+
+<!-- Top bar -->
+<rect x="0" y="0" width="900" height="36" fill="url(#topG)"/>
+<text x="18" y="23" font-family="monospace" font-size="12" font-weight="bold" fill="white" letter-spacing="2">⚠ REAL-TIME FRAUD DETECTION PLATFORM</text>
+
+<!-- Status -->
+<circle cx="600" cy="18" r="5" fill="#00FF88" filter="url(#glow1)"/>
+<circle cx="600" cy="18" r="4" fill="#00FF88">
+  <animate attributeName="r" values="4;10;4" dur="2s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/>
+</circle>
+<text x="612" y="23" font-family="monospace" font-size="10" fill="#00FF88" letter-spacing="1">LIVE</text>
+<text x="660" y="23" font-family="monospace" font-size="10" fill="white" opacity=".8">120K+ events/day</text>
+<text x="830" y="23" font-family="monospace" font-size="10" fill="#FFD700">AWS</text>
+
+<!-- Title -->
+<text x="450" y="70" text-anchor="middle" font-family="monospace" font-size="20" font-weight="bold" fill="white" letter-spacing="4" filter="url(#sglow)">FRAUD DETECTION STREAMING PIPELINE</text>
+<text x="450" y="88" text-anchor="middle" font-family="monospace" font-size="10" fill="#FF6644" letter-spacing="3">KAFKA  ·  SPARK STRUCTURED STREAMING  ·  S3  ·  REDSHIFT</text>
+
+<!-- FRAUD ALERT BOX -->
+<rect x="330" y="105" width="160" height="44" rx="5" class="alert" stroke="#FF2244" stroke-width="1.2"/>
+<text x="410" y="122" text-anchor="middle" font-family="monospace" font-size="9" font-weight="bold" fill="#FF4466" class="blink">🚨 FRAUD ALERT</text>
+<text x="410" y="136" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#FF8888">→ fraud-alerts topic</text>
+<text x="410" y="147" text-anchor="middle" font-family="monospace" font-size="6.5" fill="#FF444499">confidence score: HIGH</text>
+
+<!-- Alert pipe (up from Spark) -->
+<line x1="425" y1="195" x2="425" y2="149" stroke="#FF2244" stroke-width="1.5" stroke-opacity=".3" class="pipe" marker-end="url(#aU)"/>
+<circle cx="425" cy="193" r="4" fill="#FF2244" class="fu1" filter="url(#glow1)"/>
+<circle cx="425" cy="193" r="4" fill="#FF6644" class="fu2" filter="url(#glow1)"/>
+
+<!-- NODE 1: SOURCES -->
+<g transform="translate(75,220)">
+  <rect x="-44" y="-36" width="88" height="72" rx="7" fill="#180408" stroke="#FF2244" stroke-width="1.5" stroke-opacity=".65"/>
+  <circle cx="0" cy="-10" r="12" fill="#FF2244" opacity=".12" class="n1"/>
+  <circle cx="0" cy="-10" r="12" fill="none" stroke="#FF2244" stroke-width="1.5" filter="url(#glow1)"/>
+  <text x="0" y="-6" text-anchor="middle" font-family="monospace" font-size="9" fill="#FF4466" font-weight="bold">SRC</text>
+  <text x="0" y="12" text-anchor="middle" font-family="monospace" font-size="8" fill="#888">SOURCES</text>
+  <text x="0" y="26" text-anchor="middle" font-family="monospace" font-size="6.5" fill="#FF4466">Mobile·ATM·Web</text>
+</g>
+
+<!-- PIPE 1 -->
+<line x1="119" y1="220" x2="216" y2="220" stroke="#FF2244" stroke-width="1.8" class="pipe" marker-end="url(#aR)"/>
+<circle cx="123" cy="220" r="4.5" fill="#FF2244" class="pk1a" filter="url(#glow1)"/>
+<circle cx="123" cy="220" r="4.5" fill="#FF7700" class="pk1b" filter="url(#glow1)"/>
+<circle cx="123" cy="220" r="4.5" fill="#FFD700" class="pk1c" filter="url(#glow1)"/>
+
+<!-- NODE 2: KAFKA -->
+<g transform="translate(258,220)">
+  <rect x="-42" y="-36" width="84" height="72" rx="7" fill="#180A04" stroke="#FF7700" stroke-width="1.5" stroke-opacity=".65"/>
+  <circle cx="0" cy="-10" r="12" fill="#FF7700" opacity=".12" class="n2"/>
+  <circle cx="0" cy="-10" r="12" fill="none" stroke="#FF7700" stroke-width="1.5" filter="url(#glow1)"/>
+  <text x="0" y="-6" text-anchor="middle" font-family="monospace" font-size="9" fill="#FF9922" font-weight="bold">MQ</text>
+  <text x="0" y="12" text-anchor="middle" font-family="monospace" font-size="8" fill="#888">KAFKA</text>
+  <text x="0" y="26" text-anchor="middle" font-family="monospace" font-size="6.5" fill="#FF9922">3 partitions</text>
+</g>
+
+<!-- PIPE 2 -->
+<line x1="300" y1="220" x2="382" y2="220" stroke="#FF7700" stroke-width="1.8" class="pipe" marker-end="url(#aO)"/>
+<circle cx="304" cy="220" r="4.5" fill="#FF7700" class="pk2a" filter="url(#glow1)"/>
+<circle cx="304" cy="220" r="4.5" fill="#FFD700" class="pk2b" filter="url(#glow1)"/>
+
+<!-- NODE 3: SPARK (BIGGER - center) -->
+<g transform="translate(425,220)">
+  <rect x="-44" y="-44" width="88" height="88" rx="8" fill="#181004" stroke="#FFD700" stroke-width="2" stroke-opacity=".75"/>
+  <circle cx="0" cy="-14" r="15" fill="#FFD700" opacity=".1" class="n3"/>
+  <circle cx="0" cy="-14" r="15" fill="none" stroke="#FFD700" stroke-width="2" filter="url(#glow1)"/>
+  <text x="0" y="-10" text-anchor="middle" font-family="monospace" font-size="11" fill="#FFD700" font-weight="bold">⚡</text>
+  <text x="0" y="8" text-anchor="middle" font-family="monospace" font-size="8" fill="#888">SPARK</text>
+  <text x="0" y="20" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#FFD700">STREAMING</text>
+  <text x="0" y="34" text-anchor="middle" font-family="monospace" font-size="6" fill="#888">checkpoint → S3</text>
+</g>
+
+<!-- PIPE 3 -->
+<line x1="469" y1="220" x2="551" y2="220" stroke="#00AAFF" stroke-width="1.8" class="pipe" marker-end="url(#aB)"/>
+<circle cx="473" cy="220" r="4.5" fill="#00AAFF" class="pk3a" filter="url(#glow1)"/>
+<circle cx="473" cy="220" r="4.5" fill="#0066FF" class="pk3b" filter="url(#glow1)"/>
+
+<!-- NODE 4: S3 -->
+<g transform="translate(593,220)">
+  <rect x="-42" y="-36" width="84" height="72" rx="7" fill="#040C18" stroke="#00AAFF" stroke-width="1.5" stroke-opacity=".65"/>
+  <circle cx="0" cy="-10" r="12" fill="#00AAFF" opacity=".12" class="n4"/>
+  <circle cx="0" cy="-10" r="12" fill="none" stroke="#00AAFF" stroke-width="1.5" filter="url(#glow1)"/>
+  <text x="0" y="-6" text-anchor="middle" font-family="monospace" font-size="9" fill="#00CCFF" font-weight="bold">S3</text>
+  <text x="0" y="12" text-anchor="middle" font-family="monospace" font-size="8" fill="#888">AMAZON S3</text>
+  <text x="0" y="26" text-anchor="middle" font-family="monospace" font-size="6.5" fill="#00AAFF">Parquet·Partitioned</text>
+</g>
+
+<!-- PIPE 4 -->
+<line x1="635" y1="220" x2="716" y2="220" stroke="#9944FF" stroke-width="1.8" class="pipe" marker-end="url(#aP)"/>
+<circle cx="639" cy="220" r="4.5" fill="#9944FF" class="pk4a" filter="url(#glow1)"/>
+<circle cx="639" cy="220" r="4.5" fill="#CC66FF" class="pk4b" filter="url(#glow1)"/>
+
+<!-- NODE 5: REDSHIFT -->
+<g transform="translate(758,220)">
+  <rect x="-42" y="-36" width="84" height="72" rx="7" fill="#0C0418" stroke="#9944FF" stroke-width="1.5" stroke-opacity=".65"/>
+  <circle cx="0" cy="-10" r="12" fill="#9944FF" opacity=".12" class="n5"/>
+  <circle cx="0" cy="-10" r="12" fill="none" stroke="#9944FF" stroke-width="1.5" filter="url(#glow1)"/>
+  <text x="0" y="-6" text-anchor="middle" font-family="monospace" font-size="9" fill="#BB66FF" font-weight="bold">DW</text>
+  <text x="0" y="12" text-anchor="middle" font-family="monospace" font-size="8" fill="#888">REDSHIFT</text>
+  <text x="0" y="26" text-anchor="middle" font-family="monospace" font-size="6.5" fill="#9944FF">Analytics·BI</text>
+</g>
+
+<!-- FRAUD RULES PANEL -->
+<rect x="18" y="290" width="864" height="56" rx="4" fill="#0A0208" stroke="#FF224430" stroke-width=".8"/>
+<text x="30" y="307" font-family="monospace" font-size="8" fill="#FF664480" letter-spacing="1">DETECTION RULES</text>
+<g transform="translate(150,290)">
+  <rect x="0" y="4" width="130" height="46" rx="3" class="rl1" stroke="#FF2244" stroke-width=".8"/>
+  <text x="65" y="22" text-anchor="middle" font-family="monospace" font-size="8" fill="#FF6644">Rule 1</text>
+  <text x="65" y="35" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#888">Amount > ₹10,000</text>
+  <text x="65" y="45" text-anchor="middle" font-family="monospace" font-size="6.5" fill="#FF444499">HIGH RISK</text>
+</g>
+<g transform="translate(295,290)">
+  <rect x="0" y="4" width="130" height="46" rx="3" class="rl2" stroke="#FF4400" stroke-width=".8"/>
+  <text x="65" y="22" text-anchor="middle" font-family="monospace" font-size="8" fill="#FF7722">Rule 2</text>
+  <text x="65" y="35" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#888">Velocity > 5/60sec</text>
+  <text x="65" y="45" text-anchor="middle" font-family="monospace" font-size="6.5" fill="#FF770099">CRITICAL</text>
+</g>
+<g transform="translate(440,290)">
+  <rect x="0" y="4" width="130" height="46" rx="3" class="rl3" stroke="#FF6600" stroke-width=".8"/>
+  <text x="65" y="22" text-anchor="middle" font-family="monospace" font-size="8" fill="#FF9944">Rule 3</text>
+  <text x="65" y="35" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#888">Location Anomaly</text>
+  <text x="65" y="45" text-anchor="middle" font-family="monospace" font-size="6.5" fill="#FF884499">GEO CHECK</text>
+</g>
+<g transform="translate(585,290)">
+  <rect x="0" y="4" width="130" height="46" rx="3" class="rl4" stroke="#FFAA00" stroke-width=".8"/>
+  <text x="65" y="22" text-anchor="middle" font-family="monospace" font-size="8" fill="#FFB844">Rule 4</text>
+  <text x="65" y="35" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#888">Merchant Blacklist</text>
+  <text x="65" y="45" text-anchor="middle" font-family="monospace" font-size="6.5" fill="#FFAA0099">CRITICAL</text>
+</g>
+<g transform="translate(730,290)">
+  <rect x="0" y="4" width="120" height="46" rx="3" class="rl5" stroke="#FFD700" stroke-width=".8"/>
+  <text x="60" y="22" text-anchor="middle" font-family="monospace" font-size="8" fill="#FFD700">Rule 5</text>
+  <text x="60" y="35" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#888">50× Spike Detect</text>
+  <text x="60" y="45" text-anchor="middle" font-family="monospace" font-size="6.5" fill="#FFD70099">BEHAVIORAL</text>
+</g>
+
+<!-- METRICS ROW -->
+<line x1="18" y1="368" x2="882" y2="368" stroke="#1A0810" stroke-width="1"/>
+<g class="mb"><text x="95" y="395" text-anchor="middle" font-family="monospace" font-size="22" font-weight="bold" fill="#FF7700" filter="url(#glow1)">120K+</text><text x="95" y="413" text-anchor="middle" font-family="monospace" font-size="8" fill="#555" letter-spacing="1">EVENTS/DAY</text></g>
+<line x1="190" y1="372" x2="190" y2="420" stroke="#1A0810" stroke-width="1"/>
+<g class="mb"><text x="280" y="395" text-anchor="middle" font-family="monospace" font-size="22" font-weight="bold" fill="#FF2244" filter="url(#glow1)">99.97%</text><text x="280" y="413" text-anchor="middle" font-family="monospace" font-size="8" fill="#555" letter-spacing="1">UPTIME</text></g>
+<line x1="370" y1="372" x2="370" y2="420" stroke="#1A0810" stroke-width="1"/>
+<g class="mb"><text x="450" y="395" text-anchor="middle" font-family="monospace" font-size="22" font-weight="bold" fill="#FFD700" filter="url(#glow1)">&lt;60s</text><text x="450" y="413" text-anchor="middle" font-family="monospace" font-size="8" fill="#555" letter-spacing="1">LATENCY</text></g>
+<line x1="530" y1="372" x2="530" y2="420" stroke="#1A0810" stroke-width="1"/>
+<g class="mb"><text x="615" y="395" text-anchor="middle" font-family="monospace" font-size="22" font-weight="bold" fill="#00FF88" filter="url(#glow1)">80%↓</text><text x="615" y="413" text-anchor="middle" font-family="monospace" font-size="8" fill="#555" letter-spacing="1">FAILURES</text></g>
+<line x1="700" y1="372" x2="700" y2="420" stroke="#1A0810" stroke-width="1"/>
+<g class="mb"><text x="780" y="395" text-anchor="middle" font-family="monospace" font-size="22" font-weight="bold" fill="#00AAFF" filter="url(#glow1)">40%↓</text><text x="780" y="413" text-anchor="middle" font-family="monospace" font-size="8" fill="#555" letter-spacing="1">QUERY TIME</text></g>
+<line x1="860" y1="372" x2="860" y2="420" stroke="#1A0810" stroke-width="1"/>
+<g class="mb"><text x="882" y="395" text-anchor="middle" font-family="monospace" font-size="20" font-weight="bold" fill="#9944FF" filter="url(#glow1)">0</text><text x="882" y="413" text-anchor="middle" font-family="monospace" font-size="8" fill="#555" letter-spacing="1">DATA LOSS</text></g>
+
+<!-- Bottom bar -->
+<rect x="0" y="432" width="900" height="68" fill="#050108"/>
+<text x="450" y="452" text-anchor="middle" font-family="monospace" font-size="9" fill="#333" letter-spacing="1">EXACTLY-ONCE SEMANTICS  ·  KAFKA OFFSET MANAGEMENT  ·  SPARK CHECKPOINTING  ·  PARQUET COLUMNAR STORAGE</text>
+
+<!-- Tech stack tags -->
+<g transform="translate(120,462)">
+  <rect x="0" y="0" width="55" height="22" rx="4" fill="#FF224420" stroke="#FF224450" stroke-width=".6"/>
+  <text x="27" y="15" text-anchor="middle" font-family="monospace" font-size="8" fill="#FF6644">PySpark</text>
+</g>
+<g transform="translate(188,462)">
+  <rect x="0" y="0" width="55" height="22" rx="4" fill="#FF770020" stroke="#FF770050" stroke-width=".6"/>
+  <text x="27" y="15" text-anchor="middle" font-family="monospace" font-size="8" fill="#FF9922">Kafka</text>
+</g>
+<g transform="translate(256,462)">
+  <rect x="0" y="0" width="55" height="22" rx="4" fill="#00AAFF20" stroke="#00AAFF50" stroke-width=".6"/>
+  <text x="27" y="15" text-anchor="middle" font-family="monospace" font-size="8" fill="#00CCFF">S3</text>
+</g>
+<g transform="translate(324,462)">
+  <rect x="0" y="0" width="75" height="22" rx="4" fill="#9944FF20" stroke="#9944FF50" stroke-width=".6"/>
+  <text x="37" y="15" text-anchor="middle" font-family="monospace" font-size="8" fill="#BB66FF">Redshift</text>
+</g>
+<g transform="translate(412,462)">
+  <rect x="0" y="0" width="55" height="22" rx="4" fill="#FFD70020" stroke="#FFD70050" stroke-width=".6"/>
+  <text x="27" y="15" text-anchor="middle" font-family="monospace" font-size="8" fill="#FFD700">Python</text>
+</g>
+<g transform="translate(480,462)">
+  <rect x="0" y="0" width="95" height="22" rx="4" fill="#00FF8820" stroke="#00FF8850" stroke-width=".6"/>
+  <text x="47" y="15" text-anchor="middle" font-family="monospace" font-size="8" fill="#00FF88">OpenTelemetry</text>
+</g>
+<g transform="translate(588,462)">
+  <rect x="0" y="0" width="55" height="22" rx="4" fill="#FF770020" stroke="#FF770050" stroke-width=".6"/>
+  <text x="27" y="15" text-anchor="middle" font-family="monospace" font-size="8" fill="#FF9944">AWS</text>
+</g>
+<g transform="translate(656,462)">
+  <rect x="0" y="0" width="65" height="22" rx="4" fill="#FF224420" stroke="#FF224450" stroke-width=".6"/>
+  <text x="32" y="15" text-anchor="middle" font-family="monospace" font-size="8" fill="#FF6644">Jan 2025</text>
+</g>
+
+<!-- Bottom line -->
+<rect x="0" y="496" width="900" height="4" fill="url(#topG)"/>
+</svg>
