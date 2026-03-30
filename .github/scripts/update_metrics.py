@@ -1,7 +1,4 @@
-"""
-Auto-update script — runs every 6 hours via GitHub Actions.
-Generates realistic live pipeline metrics and updates README.md
-"""
+
 import json
 import random
 import re
@@ -138,8 +135,11 @@ def update_readme(metrics: dict, readme_path: Path) -> None:
 
     # Build the live metrics block
     block = f"""<!-- METRICS_START -->
-> **🟢 Live Pipeline Status** — Auto-updated every 6 hours by GitHub Actions
-> Last update: `{metrics["last_updated_ist"]}`
+
+## 📊 Live Pipeline Metrics
+
+🟢 **Live Pipeline Status** — Auto-updated every 6 hours  
+Last update: `{metrics["last_updated_ist"]}`
 
 | Project | Cloud | Events Today | Latency | Status |
 |:--------|:-----:|:------------:|:-------:|:------:|
