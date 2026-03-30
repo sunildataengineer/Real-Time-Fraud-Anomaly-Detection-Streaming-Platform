@@ -53,7 +53,6 @@ STREAMING (this):    Fraud happens → detected in < 60 seconds → blocked    �
 ---
 
 <!-- METRICS_START -->
-
 <!-- METRICS_END -->
 
 ## 📁 Structure
