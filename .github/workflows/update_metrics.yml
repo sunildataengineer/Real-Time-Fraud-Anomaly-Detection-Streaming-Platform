@@ -1,0 +1,42 @@
+name: Live Pipeline Metrics Auto-Update
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'   # every 6 hours
+  workflow_dispatch:          # manual trigger
+  push:
+    branches: [main]
+
+jobs:
+  update-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests python-dateutil pytz
+
+      - name: Generate live metrics
+        run: python .github/scripts/update_metrics.py
+
+      - name: Update README badges
+        run: python .github/scripts/update_badges.py
+
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name  'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add README.md docs/metrics.json docs/badges.json
+          git diff --staged --quiet || git commit -m "chore: auto-update live pipeline metrics [skip ci]"
+          git push
