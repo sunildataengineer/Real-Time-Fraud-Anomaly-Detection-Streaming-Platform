@@ -32,13 +32,13 @@ STREAMING (this):    Fraud happens → detected in < 60 seconds → blocked    �
 
 ## 🔍 5 Fraud Detection Rules
 
-| Rule | Logic | Severity |
-|:-----|:------|:--------:|
-| Amount Threshold | Single transaction > ₹10,000 | HIGH |
-| Velocity Check | > 5 transactions in 60 seconds from same card | CRITICAL |
-| Location Anomaly | Different city within 10 minutes | HIGH |
-| Merchant Blacklist | Known fraud merchant match | CRITICAL |
-| Behavioral Spike | Transaction > 50× customer's average | HIGH |
+| Rule               | Logic                                         | Severity |
+| :----------------- | :-------------------------------------------- | :------: |
+| Amount Threshold   | Single transaction > ₹10,000                  |   HIGH   |
+| Velocity Check     | > 5 transactions in 60 seconds from same card | CRITICAL |
+| Location Anomaly   | Different city within 10 minutes              |   HIGH   |
+| Merchant Blacklist | Known fraud merchant match                    | CRITICAL |
+| Behavioral Spike   | Transaction > 50× customer's average          |   HIGH   |
 
 ---
 
@@ -51,6 +51,10 @@ STREAMING (this):    Fraud happens → detected in < 60 seconds → blocked    �
 **Why Parquet on S3?** Columnar format reads only needed columns. Combined with date partitioning → 40% faster queries.
 
 ---
+
+<!-- METRICS_START -->
+
+<!-- METRICS_END -->
 
 ## 📁 Structure
 
@@ -83,13 +87,13 @@ spark-submit src/processing/spark_streaming.py
 
 ## 📊 Results
 
-| Metric | Result |
-|:-------|:------:|
-| Detection Latency | Batch hours → **< 60 seconds** |
-| Pipeline Failures | **-80%** |
-| Query Performance | **-40%** |
-| Data Loss on Failure | **0** |
-| Uptime | **99.97%** |
+| Metric               |             Result             |
+| :------------------- | :----------------------------: |
+| Detection Latency    | Batch hours → **< 60 seconds** |
+| Pipeline Failures    |            **-80%**            |
+| Query Performance    |            **-40%**            |
+| Data Loss on Failure |             **0**              |
+| Uptime               |           **99.97%**           |
 
 ---
 
@@ -107,6 +111,6 @@ Design for exactly-once from day one. My first implementation used at-least-once
 [![Portfolio](https://img.shields.io/badge/Portfolio-FF6B35?style=for-the-badge&logo=google-chrome&logoColor=white)](https://sunildataengineer.netlify.app/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github)](https://github.com/sunildataengineer)
 
-*"Bad pipelines fail silently. Good engineers don't let them."*
+_"Bad pipelines fail silently. Good engineers don't let them."_
 
 </div>
